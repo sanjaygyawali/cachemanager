@@ -2,12 +2,12 @@
 
 namespace Sanjaygyawali\Cachemanager;
 
-use Sanjaygyawali\Cachemanager\Interface\CacheManagerInterface;
+use Sanjaygyawali\Cachemanager\Contract\LPushInterface;
 
-class RedisConnector implements CacheManagerInterface
+class RedisConnector implements LPushInterface
 {
     private $redis;
-    public function __construct($options)
+    public function __construct()
     {
         $this->redis = new \Redis();
     }
